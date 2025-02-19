@@ -1,11 +1,15 @@
 package inventario;
 
 public class Producto {
+
+    public static Producto crearProducto(String nombre, double precio, int stock) {
+        return new Producto(nombre, precio, stock);
+    }
     private String nombre;
     private double precio;
     private int stock;
 
-    public Producto(String nombre, double precio, int stock) {
+    private Producto(String nombre, double precio, int stock) {
         this.nombre = nombre;
         this.precio = precio;
         this.stock = stock;
