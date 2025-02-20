@@ -1,23 +1,62 @@
 package inventario;
 
+/**
+ * 
+ * @author Laro
+ * @version Ejercicio 3.1
+ * @since 19-02-2025
+ * 
+ */
+
+/**
+ * Importación de librerías.
+ */
+
 import java.util.ArrayList;
 
 public class Inventario {
+    
+    /**
+     * Atributos.
+     */
+    
     public ArrayList<Producto> listaProductos;
 
+    /**
+     * Inicializa listaProductos
+     */
+    
     public Inventario() {
         listaProductos = new ArrayList<>();
     }
+    
+    /**
+     * 
+     * @param p 
+     * 
+     * Agrega parámetro a listaProductos
+     */
 
     public void agregar(Producto p) {
         listaProductos.add(p);
     }
+    
+    /**
+     * Muestra cada elemento de listaProductos con llamada al método mostrarInformacion()
+     */
 
     public void mostrar() {
         for (int i = 0; i < listaProductos.size(); i++) {
             listaProductos.get(i).mostrarInformacion();
         }
     }
+    
+    /**
+     * 
+     * @param args 
+     * 
+     * Método principal.
+     */
 
     public static void main(String[] args) {
         Inventario inventario = new Inventario();
